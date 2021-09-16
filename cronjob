@@ -6,4 +6,4 @@
 # │ │    │ │ │
 # │ │    │ │ │
 # │ │    │ │ │
-  0 8-20 * * * aggrelog -d "/var/log" -u "https://my-domain.region.es.amazonaws.com"
+  0 8-20 * * * aggrelog -d "/var/log" -u "https://my-domain.region.es.amazonaws.com" -r "us-east-1"
