@@ -74,6 +74,7 @@ func aggregate(logFiles map[string]*logData) filepath.WalkFunc {
 func main() {
 	var dir string
 	var domain string
+	var region string
 	logFiles := make(map[string]*logData)
 
 	// Get directory as flag
@@ -82,6 +83,9 @@ func main() {
 	// Get OpenSearch domain/url as flag
 	flag.StringVar(&domain, "url", "", "OpenSearch Service domain (url)")
 	flag.StringVar(&domain, "u", "", "OpenSearch Service domain (url)")
+	// Get AWS region as flag
+	flag.StringVar(&region, "region", "", "AWS region")
+	flag.StringVar(&region, "r", "", "AWS Region")
 
 	flag.Parse()
 
@@ -93,7 +97,6 @@ func main() {
 	index := "logs"
 	// id := "1" // id is not needed for post requests
 	endpoint := domain + "/" + index + "/" + "_doc"
-	region := "" // e.g. us-east-1
 	service := "opensearchservice"
 
 	for _, v := range logFiles {
