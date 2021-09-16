@@ -19,6 +19,9 @@ Part 2. Create a cron schedule to execute the script hourly between 8 am and 8 p
 ## Resources
 
 [List the files in a folder with Go](https://flaviocopes.com/go-list-files/)
+
 [Reading files](https://gobyexample.com/reading-files)
+
 [Regular Expressions](https://gobyexample.com/regular-expressions)
+
 [Amazon OpenSearch Service - Signing HTTP Requests (Golang)](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/request-signing.html#request-signing-go)
