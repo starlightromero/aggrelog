@@ -16,6 +16,40 @@ Output: Aggregate them into a new file and publish that to an external service t
 
 Part 2. Create a cron schedule to execute the script hourly between 8 am and 8 pm. 
 
+## Usage
+
+### How to Run
+
+The program can be run with golang (passing in the necessary flags):
+```zsh
+go run main.go ...
+```
+
+OR as an executable:
+```zsh
+./aggrelog ...
+```
+
+### Flags
+
+*All flags are required.* You can pass in either the long flag (`-directory`) or the short flag (`-d`) for a given flag.
+
+| Long Flag   | Short Flag | Description                        |
+| :---------- | :--------- | :--------------------------------- |
+| directory   | d          | root directory to aggregate logs   |
+| url         | u          | OpenSearch Service domain (url)    |
+| region      | r          | AWS region (e.g. "us-east-1")      |
+
+
+## How to Improve
+
+- The logs can be sent as a byte string to save space and request size
+- Enabling gzip to compress requests
+- Structure of the logs
+- Using concurrency to search multiple subdirectories at the same time
+- Add help text (e.g. `aggrelog -help`) to get CLI output which guides the user through the program
+
+
 ## Resources
 
 [List the files in a folder with Go](https://flaviocopes.com/go-list-files/)
